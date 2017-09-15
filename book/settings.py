@@ -69,6 +69,10 @@ DOWNLOADER_MIDDLEWARES = {
 #ITEM_PIPELINES = {
 #    'book.pipelines.BookPipeline': 300,
 #}
+ITEM_PIPELINES = {
+    # 'douban.pipelines.DoubanPipeline': 300,
+    'book.mongo_pipelines.MongoDBPipeline':300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,3 +94,9 @@ DOWNLOADER_MIDDLEWARES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+MONGODB_SERVER = '192.168.0.114'
+MONGODB_PORT = '27017'
+MONGODB_DB = 'python'
+MONGODB_COLLECTION = 'douban_book'
